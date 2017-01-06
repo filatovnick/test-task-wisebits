@@ -7,6 +7,7 @@ use Base\Pages\ResultsPage;
 use Base\Pages\ItemPage;
 use Base\Pages\CartPage;
 use Base\Pages\CheckoutPage;
+use Facebook\WebDriver\Remote\RemoteWebDriver;
 
 class Market
 {
@@ -17,7 +18,7 @@ class Market
     public $checkoutPage;
 
 
-    public function __construct(\RemoteWebDriver $webDriver)
+    public function __construct(RemoteWebDriver $webDriver)
     {
         $this->mainPage = new MainPage($webDriver);
         $this->resultPage = new ResultsPage($webDriver);

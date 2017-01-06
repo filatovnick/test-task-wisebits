@@ -4,7 +4,6 @@ namespace Base;
 
 require_once('vendor/autoload.php');
 
-use Base\BasedTest;
 use Base\Facade\Market;
 
 class MarketTest extends BasedTest

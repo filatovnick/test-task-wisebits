@@ -2,7 +2,12 @@
 
 namespace Base;
 
-abstract class BasedTest extends \PHPUnit_Framework_TestCase
+use Facebook\WebDriver\Remote\RemoteWebDriver;
+use Facebook\WebDriver\Remote\WebDriverCapabilityType;
+use PHPUnit_Framework_TestCase;
+
+
+abstract class BasedTest extends PHPUnit_Framework_TestCase
 {
     /**
      * @var RemoteWebDriver
@@ -12,8 +17,8 @@ abstract class BasedTest extends \PHPUnit_Framework_TestCase
 
     public function setUp()
     {
-        $capabilities = array(\WebDriverCapabilityType::BROWSER_NAME => 'firefox');
-        $this->driver = \RemoteWebDriver::create('http://localhost:4444/wd/hub', $capabilities);
+        $capabilities = array(WebDriverCapabilityType::BROWSER_NAME => 'firefox');
+        $this->driver = RemoteWebDriver::create('http://localhost:4444/wd/hub', $capabilities);
         $this->driver->get('https://market.yandex.ru');
     }
 
