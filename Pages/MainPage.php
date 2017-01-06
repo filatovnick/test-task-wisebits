@@ -13,7 +13,7 @@ class MainPage extends Page
     private $searchField = 'header-search';
     private $searchButton = '.search2__button>button';
     public static $username = 'autotest-mail';
-    public static $password = 'selenium';
+    public static $password = '';
     public static $searchRequest = 'iphone 7 128Gb';
 
     /**
