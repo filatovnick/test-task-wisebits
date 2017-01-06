@@ -1,0 +1,21 @@
+{
+  "name": "filatovnick/testTaskWisebits",
+  "description": "automation test using facebook/webdriver",
+  "license": "proprietary",
+  "authors": [
+    {
+      "name": "Nick Filatov",
+      "email": "fil.tmb@gmail.com"
+    }
+  ],
+  "require": {
+    "phpunit/phpunit": "5.3.*",
+    "phpunit/phpunit-selenium": "^1.4",
+    "facebook/webdriver": "dev-master"
+  },
+  "autoload": {
+      "psr-4": {
+          "Base\\": "./"
+      }
+  }
+}
