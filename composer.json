@@ -1,6 +1,7 @@
 {
   "name": "filatovnick/testtask",
   "description": "automation test using facebook/webdriver",
+  "minimum-stability": "dev",
   "license": "proprietary",
   "authors": [
     {
