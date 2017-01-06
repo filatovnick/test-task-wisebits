@@ -1,7 +1,6 @@
 {
   "name": "filatovnick/testtask",
   "description": "automation test using facebook/webdriver",
-  "minimum-stability": "dev",
   "license": "proprietary",
   "authors": [
     {
@@ -12,7 +11,7 @@
   "require": {
     "phpunit/phpunit": "5.3.*",
     "phpunit/phpunit-selenium": "^1.4",
-    "facebook/webdriver": "dev-master"
+    "facebook/webdriver": "^1.2"
   },
   "autoload": {
       "psr-4": {

@@ -4,7 +4,7 @@
 
 **Inside your composer project**
 
-`php composer.phar require filatovnick/test-task-wisebits`
+`php composer.phar require filatovnick/testtask`
 
 **Standalone**
 
