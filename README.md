@@ -18,7 +18,7 @@
 
 **Run test**
 
-`./vendore/bin/phpunit MarketTest.php`
+`./vendor/bin/phpunit ./vendor/filatovnick/testtask/MarketTest.php`
 
 
 
