@@ -8,7 +8,6 @@ class MarketTest extends BasedTest
 {
     public function testYandexMarket()
     {
-        parent::setUp();
         $market = new Market($this->driver);            // для взаимодействия с инстансами страниц используется паттерн Фасад
         $market->mainPage->login();                     // авторизуемся на сайте
         $market->mainPage->search();                    // поиск по строке "iphone 7 128Gb"
