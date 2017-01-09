@@ -17,8 +17,13 @@ abstract class BasedTest extends PHPUnit_Framework_TestCase
 
     public function setUp()
     {
+        // for run test in cloud
+        //$capabilities = array(WebDriverCapabilityType::BROWSER_NAME => 'chrome', 'browserstack.debug'=>'true', 'build'=>'First build');
+        //$this->driver = RemoteWebDriver::create('https://nickfilatov3:DLcUbqVLfDqemJthaFYc@hub-cloud.browserstack.com/wd/hub', $capabilities);
+        
         $capabilities = array(WebDriverCapabilityType::BROWSER_NAME => 'firefox');
         $this->driver = RemoteWebDriver::create('http://localhost:4444/wd/hub', $capabilities);
+        $this->driver->manage()->window()->maximize();
         $this->driver->get('https://market.yandex.ru');
     }
 
