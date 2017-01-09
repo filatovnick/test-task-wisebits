@@ -21,6 +21,7 @@
 **run in cloud** (browserstack.com)
 
 `  $capabilities = array(WebDriverCapabilityType::BROWSER_NAME => 'chrome', 'browserstack.debug'=>'true', 'build'=>'First build');`
+
  `  $this->driver = RemoteWebDriver::create('https://nickfilatov3:DLcUbqVLfDqemJthaFYc@hub-cloud.browserstack.com/wd/hub', $capabilities);
 `
 
