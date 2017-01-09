@@ -4,7 +4,7 @@ namespace Base\Pages;
 
 class MainPage extends Page
 {
-    private $loginButton = '.user__enter-label';
+    private $loginButton = "//div[@class='header2-nav__user']//a[.='Войти']";
     private $usernameField = '.auth__username>span>span>input';
     private $passwordField = '.auth__password>span>span>input';
     private $submitButton = '.auth__button';
@@ -82,7 +82,7 @@ class MainPage extends Page
 
     public function login()
     {
-        $this->driver->findElement(\WebDriverBy::cssSelector($this->getLoginButton()))->click();
+        $this->driver->findElement(\WebDriverBy::xpath($this->getLoginButton()))->click();
         $this->driver->wait(10, 200)->until(
             \WebDriverExpectedCondition::visibilityOfElementLocated(
             \WebDriverBy::cssSelector(self::getUsernameField())
