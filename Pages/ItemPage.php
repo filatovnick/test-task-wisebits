@@ -78,19 +78,21 @@ class ItemPage extends Page
 
     public function selectLowCostAndAddToCart()
     {
-        $costs = $this->driver->findElements(\WebDriverBy::cssSelector($this->getPrice()));
-        foreach ($costs as $cost) {
-            $costOfInt = preg_replace("/[^0-9]/", '', $cost);
-            sort($costOfInt);
-            try{
-                if (assertContains($cost, $costOfInt[0])) {
-                    $cost->click();
-                }
-            }catch (NoSuchElementException $e){
-                throw $e;
+        $costs = $this->driver->findElements(\WebDriverBy::cssSelector($this->getPrice()));;
+        $sortedCosts = usort($costs, function($a, $b) {
+            if ($a == $b) {
+                return 0;
             }
+            return ($a < $b) ? -1 : 1;
+        });
 
+        foreach ($costs as $price){
+            if($price == $sortedCosts[0]){
+                $price->click();
+                break;
+            }
         }
+
     }
 
     public function openCart()
